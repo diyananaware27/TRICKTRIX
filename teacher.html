@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Teacher - Add Quiz</h2>
+    <form id="quizForm">
+      <input type="text" id="question" placeholder="Enter Question" required>
+      <input type="text" id="option1" placeholder="Option 1" required>
+      <input type="text" id="option2" placeholder="Option 2" required>
+      <input type="text" id="option3" placeholder="Option 3" required>
+      <input type="text" id="answer" placeholder="Correct Answer" required>
+      <button type="submit">Add Question</button>
+    </form>
+    <div id="quizList"></div>
+  </div>
+  <script src="teacher.js"></script>
+</body>
+</html>
