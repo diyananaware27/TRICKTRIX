@@ -3,56 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Online Quiz Application</title>
+  <title>Login - TrickTrix</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      color: #fff;
     }
-    .container {
-      background: white;
-      padding: 30px;
+    .login-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
       border-radius: 15px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       width: 300px;
+      text-align: center;
     }
     h2 {
       margin-bottom: 20px;
-      color: #333;
     }
-    .btn {
-      display: block;
+    input {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       margin: 10px 0;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
+      border-radius: 5px;
+      outline: none;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #ffcc00;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
       cursor: pointer;
       transition: 0.3s;
     }
-    .student { background: #4CAF50; color: white; }
-    .teacher { background: #2196F3; color: white; }
-    .kids { background: #FF9800; color: white; }
-
     .btn:hover {
-      opacity: 0.9;
+      background: #ffaa00;
       transform: scale(1.05);
+    }
+    .links {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+    .links a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Login As</h2>
-    <button class="btn student" onclick="window.location.href='student.html'">Student</button>
-    <button class="btn teacher" onclick="window.location.href='teacher.html'">Teacher</button>
-    <button class="btn kids" onclick="window.location.href='kids.html'">Kids</button>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Roll No / Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <div class="links">
+      <p>New user? <a href="#">Register</a></p>
+    </div>
   </div>
 </body>
 </html>
