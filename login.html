@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Online Quiz Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .student { background: #4CAF50; color: white; }
+    .teacher { background: #2196F3; color: white; }
+    .kids { background: #FF9800; color: white; }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login As</h2>
+    <button class="btn student" onclick="window.location.href='student.html'">Student</button>
+    <button class="btn teacher" onclick="window.location.href='teacher.html'">Teacher</button>
+    <button class="btn kids" onclick="window.location.href='kids.html'">Kids</button>
+  </div>
+</body>
+</html>
