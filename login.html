@@ -2,121 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login - TrickTrix</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .login-container {
-      background: rgba(255,255,255,0.15);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      width: 350px;
-      text-align: center;
-      color: white;
-    }
-    h2 {
-      margin-bottom: 20px;
-    }
-    input, select, button {
-      width: 90%;
-      padding: 10px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 8px;
-    }
-    input, select {
-      background: #fff;
-      color: #000;
-    }
-    button {
-      background: #ffb300;
-      color: black;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background: #ffa000;
-    }
-    .register {
-      margin-top: 10px;
-      display: block;
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrickTrix - Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
+  <div class="container">
+    <h2>Login to TrickTrix</h2>
     <form id="loginForm">
-      <input type="text" id="name" placeholder="Full Name" required><br>
-      <input type="text" id="rollPhone" placeholder="Roll No / Phone Number" required><br>
-      <input type="email" id="email" placeholder="Email Address" required><br>
-      <input type="password" id="password" placeholder="Password" required><br>
+      <input type="text" id="name" placeholder="Enter Name" required>
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <input type="text" id="phone" placeholder="Enter Phone Number" required>
+      
       <select id="role" required>
-        <option value="">Select Role</option>
+        <option value="">-- Select Role --</option>
         <option value="student">Student</option>
         <option value="teacher">Teacher</option>
         <option value="kids">Kids</option>
-      </select><br>
+      </select>
+
       <button type="submit">Login</button>
     </form>
-    <a href="register.html" class="register">New user? Register</a>
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
+    document.getElementById("loginForm").addEventListener("submit", function(e){
       e.preventDefault();
-
-      let name = document.getElementById("name").value.trim();
-      let rollPhone = document.getElementById("rollPhone").value.trim();
-      let email = document.getElementById("email").value.trim();
-      let password = document.getElementById("password").value.trim();
+      let email = document.getElementById("email").value;
       let role = document.getElementById("role").value;
 
-      // Name check
-      if (name === "") {
-        alert("Name is required!");
+      if(!email.includes("@")){
+        alert("❌ Not a valid email");
         return;
       }
 
-      // Roll No / Phone check (only digits allowed)
-      if (!/^[0-9]+$/.test(rollPhone)) {
-        alert("Roll No / Phone should contain only numbers!");
-        return;
-      }
-
-      // Email check
-      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!emailPattern.test(email)) {
-        alert("Invalid Email Address!");
-        return;
-      }
-
-      // Password check
-      if (password.length < 4) {
-        alert("Password must be at least 4 characters!");
-        return;
-      }
-
-      // Role check
-      if (role === "") {
-        alert("Please select a role!");
-        return;
-      }
-
-      alert("Login Successful as " + role.charAt(0).toUpperCase() + role.slice(1));
-      // ✅ Redirect after login
-      window.location.href = "quiz.html";
+      if(role === "student") window.location.href = "student.html";
+      else if(role === "teacher") window.location.href = "teacher.html";
+      else if(role === "kids") window.location.href = "kids.html";
     });
   </script>
 </body>
 </html>
+
+
+
+
+
++
