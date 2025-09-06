@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Result</h1>
+    <h2 id="score"></h2>
+    <button onclick="window.location.href='quiz.html'">Retry</button>
+    <button onclick="window.location.href='index.html'">Home</button>
+  </div>
+
+  <script>
+    const studentScore = localStorage.getItem("studentScore");
+    const kidsScore = localStorage.getItem("kidsScore");
+    if (studentScore) {
+      document.getElementById("score").innerText = "Student Score: " + studentScore;
+    }
+    if (kidsScore) {
+      document.getElementById("score").innerText = "Kids Score: " + kidsScore;
+    }
+  </script>
+</body>
+</html>
