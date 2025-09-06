@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - TrickTrix</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="text" id="name" placeholder="Enter Name" required><br>
+      <input type="email" id="email" placeholder="Enter Email" required><br>
+      <input type="tel" id="phone" placeholder="Enter Phone" required><br>
+      
+      <label for="role">Select Role:</label>
+      <select id="role" required>
+        <option value="">--Select--</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="kids">Kids</option>
+      </select><br>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
