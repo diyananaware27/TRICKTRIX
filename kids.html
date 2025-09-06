@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Kids Quiz</h1>
+
+    <label for="language">Choose Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="mr">Marathi</option>
+    </select>
+
+    <div id="quizArea">
+      <img id="quizImage" src="" alt="Question Image" width="200"><br>
+      <div id="options"></div>
+    </div>
+
+    <button onclick="speakQuestion()">🔊 Speak</button>
+  </div>
+</body>
+</html>
